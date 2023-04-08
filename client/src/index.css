@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  background-color: #ffdf8c;
+  padding-top: 50px;
+}
+
+.root {
+  border-radius: 20px;
+}
+.container {
+  width: 1340px;
+  padding: 0 50px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+.nav-end-box {
+  margin-left: 15px;
+}
+
+.pizzabek {
+  margin-bottom: 10px;
+}
+.uzs {
+  color: #fff;
+  padding-right: 5px;
+  margin-right: 8px;
+  border-right: 1px solid #eee;
+}
+
+.btns {
+  background: #fe5f1e;
+  border-radius: 30px;
+  padding: 14px 26px;
+  border: none;
+}
+.zero {
+  color: #fff;
+  margin-left: 8px;
+}
+.input {
+  outline: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px;
+  padding: 13px 0 13px 43px;
+  background-image: url(./assets/icons/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 175px);
+  margin-right: 210px;
+}
+.top-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  width: 290px;
+  padding: 10px 20px;
+  height: 400px;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 5px 2px 30px rgba(210, 208, 215, 0.3);
+  border-radius: 10px;
+}
+.card-body {
+  height: 100%;
+  padding: 0;
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: 5px 2px 30px rgba(153, 153, 153, 0.3);
+}
+.bottom-box {
+  display: flex;
+  height: calc(100% - 210px);
+  flex-direction: column;
+}
+.image {
+  width: 100% !important;
+  border-radius: 6px;
+  transform: scale(1.1);
+}
+.img-box {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  object-fit: cover;
+}
+.card-title {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 17px;
+  color: #000000;
+}
+.card-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  color: #828282;
+}
+.price {
+  background: #ebebeb;
+  border-radius: 7px;
+  padding: 3px 8px;
+  margin-top: auto;
+  width: fit-content;
+}
+.top-top-box {
+  padding: 40px 0 50px 0;
+}
+.barchasi {
+  padding: 13px 30px;
+  color: #000;
+  background: #f9f9f9;
+  border: none;
+  border-radius: 30px;
+  margin-right: 12px;
+  transition: 0.2s ease-in;
+}
+.barchasi:hover {
+  color: #fff;
+  background-color: #000;
+}
+.main-title {
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 30px;
+  color: #232323;
+  margin-bottom: 50px;
+}
+
+.site-header {
+  border-radius: 25px 25px 0 0;
+}
+.main-box {
+  border-radius: 0 0 25px 25px;
+  margin-bottom: 40px;
+}
+
+.top-box {
+  padding-bottom: 20px;
+}
+.active {
+  padding: 13px 30px;
+  color: #f9f9f9;
+  background: #000;
+  border: none;
+  border-radius: 30px;
+  margin-right: 12px;
+  transition: 0.2s ease-in;
+}
