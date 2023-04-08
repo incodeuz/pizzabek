@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ valu, onClick }) => {
   return (
-    <div className="card" onClick={onClick}>
+    <div className="card" onClick={() => onClick(valu.id)}>
       <div className="card-body">
         <div className="img-box">
           <img

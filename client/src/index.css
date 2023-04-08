@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Nunito", sans-serif;
+}
+
+body {
   font-weight: 400;
   background-color: #ffdf8c;
   padding-top: 50px;
@@ -26,10 +32,12 @@ body {
 }
 .nav-end-box {
   margin-left: 15px;
+  display: flex;
+  flex-direction: column;
 }
-
-.pizzabek {
-  margin-bottom: 10px;
+.nav-start-box {
+  display: flex;
+  align-items: center;
 }
 .uzs {
   color: #fff;
@@ -49,7 +57,6 @@ body {
   margin-left: 8px;
 }
 .input {
-  outline: none;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -167,4 +174,104 @@ body {
   border-radius: 30px;
   margin-right: 12px;
   transition: 0.2s ease-in;
+}
+
+.hero-wrapper {
+  border-radius: 0 0 25px 25px;
+}
+
+.pizzabek {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: -5px;
+}
+.eng_mazali {
+  margin: 0;
+}
+.modalStyle {
+  width: 100vh !important;
+}
+
+.ant-modal-content {
+  border-radius: 32px !important;
+}
+
+.ant-btn {
+  display: none !important;
+}
+
+.ant-modal-close-x {
+  display: none !important;
+}
+.close-box {
+  padding: 10px;
+  display: inline-block;
+}
+.close-box:hover {
+  width: fit-content;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+}
+
+.img-boxx {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-boxx > img {
+  width: 590px;
+  animation: animcha infinite 25s linear;
+}
+.img-boxx > img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animcha {
+  /* 0% {
+    transform: rotate(0deg);
+  } */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modalni-biri {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
+.modalni-ikkisi > h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.modalni-ikkisi > button {
+  background: #006f4c;
+  border-radius: 100px;
+  border-radius: 30px;
+  padding: 20px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
 }
