@@ -67,6 +67,17 @@ body {
   background-position: calc(50% - 175px);
   margin-right: 210px;
 }
+.innput {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px;
+  padding: 13px 0 13px 43px;
+  background-image: url(./assets/icons/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 160px);
+  margin-right: 210px;
+}
 .top-box {
   display: flex;
   flex-wrap: wrap;

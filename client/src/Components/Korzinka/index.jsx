@@ -5,12 +5,12 @@ import DecrementIcon from "../../assets/icons/decrement.svg";
 import KorBosh from "../../assets/images/korzinka-bosh.png";
 
 const Korzinka = () => {
-  const [many, setMany] = useState(1);
   const [dataSavat, setDataSavat, sanoq] = useContext(SavatchaContext);
+  const [many, setMany] = useState(null);
   return (
     <div className="top-box">
       <section className="hero-secion">
-        <div className="hero-wrapper container d-flex align-items-center justify-content-center">
+        <div className="hero-wrapper container d-flex align-items-center justify-content-center gap-4">
           {dataSavat.length ? (
             <>
               <div className="korzinka-pitsa">
@@ -32,7 +32,9 @@ const Korzinka = () => {
                     </div>
                     <div className="one-pitsa-right d-flex flex-column align-items-end gap-3">
                       <p className="one-pitsa-price p-0 m-0">
-                        {onePissa?.price && onePissa?.price + " USD"}
+                        {onePissa?.price && many === null
+                          ? onePissa?.price + " USD"
+                          : onePissa?.price * many + " USD"}
                       </p>
                       <div
                         style={{
@@ -42,14 +44,21 @@ const Korzinka = () => {
                         className="count-box m-0"
                       >
                         <button
-                          onClick={() => many > 1 && setMany(many - 1)}
+                          onClick={() =>
+                            many > 1 &&
+                            setMany(many === null ? onePissa.count : many - 1)
+                          }
                           className="count-btn"
                         >
                           <img src={DecrementIcon} alt="" />
                         </button>
-                        <p className="m-0 count-num">{many} - ta</p>
+                        <p className="m-0 count-num">
+                          {many === null ? onePissa.count : many} - ta
+                        </p>
                         <button
-                          onClick={() => setMany(many + 1)}
+                          onClick={() =>
+                            setMany(many === null ? onePissa.count : many + 1)
+                          }
                           className="count-btn"
                         >
                           <img src={IncrementIcon} alt="" />
@@ -59,7 +68,18 @@ const Korzinka = () => {
                   </div>
                 ))}
               </div>
-              <div className="promokod"></div>
+              <div className="promokod">
+                <span>Buyurtma qilish</span>
+                <br />
+                <input
+                  style={{ width: "100%" }}
+                  className="input innput"
+                  type="text"
+                  placeholder="Promokod kiriting"
+                />
+                <br />
+                <span>Umumiy summa {sanoq.price} USD</span>
+              </div>
             </>
           ) : (
             <img style={{ margin: "100px 0" }} src={KorBosh} alt="asdasdasd" />
