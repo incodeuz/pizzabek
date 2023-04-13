@@ -17,7 +17,7 @@ const Card = ({ valu, onClick }) => {
             <p className="card-title">{valu.title}</p>
             <p className="card-text">{valu.description}</p>
           </div>
-          <span className="price">{valu.price}</span>
+          <span className="price">{valu.price} USD</span>
         </div>
       </div>
     </div>

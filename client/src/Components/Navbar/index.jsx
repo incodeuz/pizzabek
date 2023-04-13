@@ -5,9 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useLocation } from "react-router-dom";
 import { PizzaContext } from "../../context/barcha-pitsalar";
 import { API_PATH } from "../../utils";
-
+import { SavatchaContext } from "../../context/savatcha";
 const Navbar = () => {
   const { pathname } = useLocation();
+  const [dataSavat, setDataSavat, sanoq, setSanoq] =
+    useContext(SavatchaContext);
 
   const [, setData] = useContext(PizzaContext);
   const [datas, setDatas] = useState([]);
@@ -26,7 +28,7 @@ const Navbar = () => {
       )
     );
   };
-
+  console.log(dataSavat);
   return (
     <>
       <header className="site-header container">
@@ -54,9 +56,9 @@ const Navbar = () => {
             ) : (
               <Link to="/korzinka">
                 <button className="btns" type="button">
-                  <span className="uzs"> 0 UZS</span>
+                  <span className="uzs"> {sanoq.price} USD</span>
                   <img className="img-korzina" src={korzinka} alt="" />
-                  <span className="zero">0</span>
+                  <span className="zero">{sanoq.count}</span>
                 </button>
               </Link>
             )}

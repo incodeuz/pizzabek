@@ -169,7 +169,7 @@ body {
 .active {
   padding: 13px 30px;
   color: #f9f9f9;
-  background: #000;
+  background: #fe5f1e;
   border: none;
   border-radius: 30px;
   margin-right: 12px;
@@ -191,7 +191,7 @@ body {
   margin: 0;
 }
 .modalStyle {
-  width: 100vh !important;
+  width: 900px !important;
 }
 
 .ant-modal-content {
@@ -233,9 +233,6 @@ body {
 }
 
 @keyframes animcha {
-  /* 0% {
-    transform: rotate(0deg);
-  } */
   100% {
     transform: rotate(360deg);
   }
@@ -244,8 +241,14 @@ body {
 .modalni-biri {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
-  gap: 30px;
+  margin-bottom: 35px;
+  gap: 60px;
+}
+
+.modalni-ikkisi {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .modalni-ikkisi > h2 {
@@ -258,7 +261,7 @@ body {
   color: #000000;
 }
 
-.modalni-ikkisi > button {
+.button {
   background: #006f4c;
   border-radius: 100px;
   border-radius: 30px;
@@ -274,4 +277,140 @@ body {
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+}
+
+.onepizza-price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.onepizza-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  color: #828282;
+}
+
+.pitsa-kattaligi {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18.72px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.count-box {
+  background: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.count-btn {
+  border-radius: 100px;
+  border: none;
+  padding: 5px 19px;
+  background-color: transparent;
+}
+
+.count-btn:hover {
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+  border: none;
+  padding: 5px 19px;
+}
+
+.count-num {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.count-btnn {
+  width: 100%;
+}
+
+.count-boxx {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ant-segmented,
+.ant-segmented-lg {
+  border-radius: 30px !important;
+  padding: 4px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+}
+
+.ant-segmented-item,
+.ant-segmented-item-selected {
+  flex: 1 !important;
+  border-radius: 30px !important;
+}
+
+.korzinka-pitsa {
+  padding-bottom: 30px;
+  width: 70%;
+}
+.promokod {
+  width: 30%;
+}
+
+.one-pitsa {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+}
+
+.one-pitsa-price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 18px;
+  /* or 82% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.one-pitsa-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 17px;
+  /* identical to box height, or 68% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
 }
