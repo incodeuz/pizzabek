@@ -11,6 +11,7 @@ import { SavatchaContext } from "../../context/savatcha";
 const Main = () => {
   const [data, setData] = useContext(PizzaContext);
   const [many, setMany] = useState(1);
+  const [xamiri, setXamiri] = useState("");
   const [dataSavat, setDataSavat, sanoq, setSanoq] =
     useContext(SavatchaContext);
   const [categorys, setCategorys] = useState(null);
@@ -27,15 +28,19 @@ const Main = () => {
     setIsModalOpen(false);
     setDataSavat((p) => [
       ...p,
-      { ...onePizza, count: many, price: onePizza.price * many },
+      {
+        ...onePizza,
+        count: many,
+        price: onePizza.price * many,
+        xamir: xamiri ? xamiri : xamiri === "" ? "o'rtacha" : onePizza.xamir[0],
+      },
     ]);
     setSanoq({
       price: (sanoq.price += +onePizza.price * many),
       count: (sanoq.count += many),
     });
+    setXamiri("");
   };
-
-  console.log(sanoq);
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -98,7 +103,14 @@ const Main = () => {
               </div>
               <p className="pitsa-kattaligi">Xamirning qalinligi</p>
               <Space direction="vertical" className="mb-3">
-                <Segmented size="large" options={onePizza && xamirs} />
+                <Segmented
+                  defaultValue={onePizza?.xamir[0]}
+                  defaultChecked={onePizza?.xamir[0]}
+                  default={onePizza?.xamir[0]}
+                  onChange={(e) => setXamiri(e)}
+                  size="large"
+                  options={onePizza && xamirs}
+                />
               </Space>
               <div className="d-flex align-items-center justify-content-between">
                 <p className="onepizza-price p-0 m-0">

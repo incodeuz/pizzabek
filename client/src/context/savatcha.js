@@ -7,7 +7,6 @@ const SavatchaComp = ({ children }) => {
   const [sanoq, setSanoq] = useState({
     price: 0,
     count: 0,
-    xamir: "",
   });
   return (
     <SavatchaContext.Provider

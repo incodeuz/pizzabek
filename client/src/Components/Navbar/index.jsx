@@ -28,7 +28,7 @@ const Navbar = () => {
       )
     );
   };
-  console.log(dataSavat);
+
   return (
     <>
       <header className="site-header container">
