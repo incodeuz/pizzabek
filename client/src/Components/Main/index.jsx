@@ -32,7 +32,11 @@ const Main = () => {
         ...onePizza,
         count: many,
         price: onePizza.price * many,
-        xamir: xamiri ? xamiri : xamiri === "" ? "o'rtacha" : onePizza.xamir[0],
+        xamir: xamiri
+          ? xamiri
+          : xamiri === ""
+          ? onePizza.xamir[0]
+          : onePizza.xamir[0],
       },
     ]);
     setSanoq({
